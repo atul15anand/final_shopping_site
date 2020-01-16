@@ -13,13 +13,27 @@
           <big>Categories</a>
         </big><div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <!-- <a class="dropdown-item" href="#">Action</a> -->
-          <%= link_to "Electronics","#", class: "dropdown-item" %>
+          <%= link_to "Electronics",products_path(:category => "electronics"), class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Clothing</a>
+          <%= link_to "Clothing","#", class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Furniture</a>
+          <%= link_to "Furniture","#", class: "dropdown-item" %>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Grocery</a>
+          <%= link_to "Grocery","#", class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <big>Filters</a>
+        </big><div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <a class="dropdown-item" href="#">Action</a> -->
+          <%= link_to "Price-low to high",products_path(:val => "2"), class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Price-high to low","#", class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Popular","#", class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "Company","#", class: "dropdown-item" %>
         </div>
       </li>
       <li class="nav-item ">

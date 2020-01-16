@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @products = @products.order(price: :desc)
+    if params[:val]=="2"
+      @products = @products.where(category: "electronics")
+    else 
+      @products = Product.all
+    end
   end
 
   # GET /products/1
